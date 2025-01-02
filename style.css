@@ -1,1034 +1,1032 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    top: 1%;
-    left: auto;
-    width: 98%;
-    height: 7%;
-    min-height: 65px;
-    display: flex;
-    position: fixed;
-    align-self: flex-end;
-    align-items: center;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    background-color: #b5b97a;
-  }
-  .statsText {
-    width: 60%;
-    min-width: 100px;
-    height: 35px;
-    display: flex;
-    font-size: 1em;
-    font-style: normal;
-    align-items: center;
-    font-weight: 400;
-    margin-left: 80px;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    padding-left: 20px;
-    border-radius: 10px;
-    justify-content: flex-start;
-    background-color: #ececec;
-  }
-  
-  .buttonSignUp {
-    width: 100px;
-    min-width: 70px;
-    height: 30px;
-    background-color: #bafcf7;
-    border: 1px solid #1a1a1a;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 10%;
-    text-align: center;
-    padding-bottom: 2px;
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    touch-action: manipulation;
-    will-change: transform;
-  }
-  
-  .buttonSignUp:hover {
-    color: #000000;
-    background-color: #e2faac;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .buttonSignUp:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .buttonLogIn {
-    width: 100px;
-    min-width: 70px;
-    height: 30px;
-    background-color: #9ef89e;
-    border: 1px solid #1a1a1a;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 1%;
-    text-align: center;
-    padding-bottom: 2px;
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    touch-action: manipulation;
-    will-change: transform;
-  }
-  
-  .buttonLogIn:hover {
-    color: #000000;
-    background-color: #faf5ac;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .buttonLogIn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .loginText {
-    width: auto;
-    min-width: 150px;
-    height: 30px;
-    display: flex;
-    font-size: 14px;
-    text-align: center;
-    align-items: center;
-    margin-left: 2%;
-    border-color: #9f9f9f;
-    background-color: #cdefff;
-    border-style: solid;
-    border-width: 1px;
-    margin-right: 2%;
-    padding-left: 10px;
-    border-radius: 10px;
-    padding-right: 10px;
-  }
-  
-  .buttonRevert {
-    width: 100px;
-    min-width: 70px;
-    height: 30px;
-    background-color: #f57272;
-    border: 1px solid #1a1a1a;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 1%;
-    margin-right: 2%;
-    text-align: center;
-    padding-bottom: 2px;
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    touch-action: manipulation;
-    will-change: transform;
-  }
-  
-  .buttonRevert:hover {
-    color: #000000;
-    background-color: #fa0000;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .buttonRevert:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .mapLogo {
-    left: 40px;
-    color: #0000ff;
-    position: fixed;
-  }
-  
-  .bodyArea {
-    position: fixed;
-    margin-top: 4%;
-    left: auto;
-    width: 98%;
-    height: 89%;
-    display: flex;
-    align-items: center;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    background-color: transparent;
-  }
-  
-  .sideBarDiv {
-    margin-left: 1640px;
-    margin-top: 75px;
-    width: 11%;
-    height: 81%;
-    display: inline;
-    opacity: 1;
-    padding-top: 30px;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    padding-left: 15px;
-    border-radius: 5px;
-    padding-right: 15px;
-    padding-bottom: 30px;
-    background-color: #f3f5af;
-  }
-  
-  .zoomDiv {
-    width: auto;
-    height: 25%;
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
-    background-color: #a6eca7;
-  }
-  
-  .zoomLabel {
-    display: flex;
-    margin-top: 5%;
-    margin-left: 35%;
-    color: #000000;
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .btnZoomIn {
-    width: 50px;
-    min-width: 40px;
-    height: 30px;
-    background-color: #b6f0ff;
-    border: 1px solid #1a1a1a;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 5%;
-    margin-left: 15%;
-    text-align: center;
-    padding-bottom: 4px;
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    touch-action: manipulation;
-    will-change: transform;
-  }
-  
-  .btnZoomIn:hover {
-    color: #000000;
-    background-color: #00d4fa;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .btnZoomIn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .zoomValues {
-    width: 30px;
-    min-width: 10px;
-    height: 20px;
-    display: inline-block;
-    font-size: 14px;
-    text-align: center;
-    font-weight: 400;
-    margin-left: 5%;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    padding-top: 5px;
-    border-radius: 3px;
-    background-color: #ffffff;
-  }
-  
-  .btnZoomOut {
-    width: 50px;
-    min-width: 40px;
-    height: 30px;
-    background-color: #b6f0ff;
-    border: 1px solid #1a1a1a;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    margin-left: 5%;
-    margin-top: 5%;
-    text-align: center;
-    padding-bottom: 5px;
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    touch-action: manipulation;
-    will-change: transform;
-  }
-  
-  .btnZoomOut:hover {
-    color: #000000;
-    background-color: #00d4fa;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .btnZoomOut:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .zoomValuesMin {
-    width: 60px;
-    min-width: 10px;
-    height: 20px;
-    display: inline-block;
-    font-size: 14px;
-    text-align: center;
-    font-weight: 400;
-    margin-left: 20%;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    padding-top: 5px;
-    border-radius: 3px;
-    background-color: #ffffff;
-  }
-  
-  .zoomValuesMax {
-    width: 60px;
-    min-width: 10px;
-    height: 20px;
-    display: inline-block;
-    font-size: 14px;
-    text-align: center;
-    font-weight: 400;
-    margin-left: 5%;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    padding-top: 5px;
-    border-radius: 3px;
-    background-color: #ffffff;
-  }
-  
-  /* Dropdown Button */
-  .dropbtn {
-    width: 100px;
-    height: 30px;
-    margin-left: 2%;
-    margin-top: 2%;
-    background-color: hsl(61, 100%, 68%);
-    color: rgb(0, 0, 0);
-    padding-left: 15px;
-    padding-top: 5px;
-    text-align: center;
-    font-size: 14px;
-    border: solid;
-    border-width: 1px;
-    display: flex;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fffd90;
-    font-size: 14px;
-    min-width: 100px;
-    box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 14px;
-    text-decoration: none;
-    font-size: 14px;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    color: #000000;
-    background-color: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .layerManipulation {
-    width: 100%;
-    height: 37%;
-    margin-top: 10%;
-    margin-left: 0%;
-    display: flex;
-    align-self: center;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    flex-direction: column;
-    background-color: #95f7b4;
-  }
-  
-  .layersID {
-    display: inline;
-    width: 180px;
-    height: 200px;
-    margin-top: 3.5%;
-    margin-left: 15px;
-    position: absolute;
-    border-color: #000000;
-    border-style: dotted;
-    border-width: 1px;
-    background-color: #6effec;
-  }
-  
-  .layerLabel {
-    display: flex;
-    margin-top: 5%;
-    margin-left: 30%;
-    color: #000000;
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .layerLabel2 {
-    display: flex;
-    margin-top: 0%;
-    margin-left: 10%;
-    color: #000000;
-    font-size: 14px;
-    font-weight: 400;
-    word-spacing: 20px;
-  }
-  
-  .item {
-    padding: 5px;
-    border: 0px solid #ccc;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .checkbox {
-    width: 16px;
-    height: 16px;
-    margin-right: 15px;
-  }
-  
-  .item.highlight {
-    background-color: #eeff00;
-  }
-  
-  .zOrderInput1 {
-    top: 3px;
-    left: 110px;
-    width: 30%;
-    height: 20px;
-    position: absolute;
-  }
-  
-  .zOrderInput2 {
-    top: 35px;
-    left: 110px;
-    width: 30%;
-    height: 20px;
-    position: absolute;
-  }
-  
-  .zOrderInput3 {
-    top: 67px;
-    left: 110px;
-    width: 30%;
-    height: 20px;
-    position: absolute;
-  }
-  
-  #rangeValue {
-    position: relative;
-    display: block;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #000000;
-    font-weight: 400;
-  }
-  .rangeOpacity {
-    width: auto;
-    margin-left: 10px;
-    height: 15px;
-    background: #000000;
-    border-radius: 15px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
-  }
-  .rangeOpacity::-webkit-slider-thumb {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #00fd0a;
-    cursor: pointer;
-    border: 4px solid #333;
-    box-shadow: -407px 0 0 400px #00fd0a;
-  
-    -webkit-appearance: none;
-    background: #aa2b2b;
-    box-shadow: -200px 0 0 200px rgb(247, 252, 0); /* 2 */
-    border: 2px solid #ee0b0b; /* 1 */
-  }
-  
-  #rangeValue1 {
-    position: relative;
-    display: block;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #000000;
-    font-weight: 400;
-  }
-  .rangeOpacity1 {
-    width: auto;
-    margin-left: 25px;
-    height: 15px;
-    background: #c8ff00;
-    border-radius: 15px;
-    box-shadow: inset 0 0 5px rgb(217, 255, 0);
-  }
-  
-  .mapOptions {
-    width: 100%;
-    height: 33%;
-    margin-top: 10%;
-    margin-left: 0%;
-    display: inline-block;
-    align-self: center;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    background-color: #95f7b4;
-  }
-  
-  .optionsLabel {
-    display: flex;
-    margin-top: 5%;
-    margin-left: 30%;
-    color: #000000;
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .populationNumber {
-    background-color: rgb(252, 252, 40);
-    border-color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    width: 95%;
-    height: 42%;
-    margin-left: 5px;
-    margin-top: 10px;
-  }
-  
-  .item1 {
-    padding: 5px;
-    border: 0px solid #ccc;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .listItem1 {
-    font-size: 16px;
-  }
-  .item1-text {
-    width: auto;
-    height: auto;
-    font-size: 14px;
-    margin-top: 30px;
-    line-height: 2;
-    border-color: black;
-    border-width: 0px;
-  }
-  
-  .mainPage {
-    top: 96px;
-    left: 17px;
-    width: 81%;
-    height: 81%;
-    display: inline;
-    opacity: 1;
-    padding: 15px;
-    position: fixed;
-    padding-top: 30px;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    padding-left: 30px;
-    border-radius: 5px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    background-image: linear-gradient(
-      270deg,
-      rgb(194, 229, 156) 0%,
-      rgb(100, 179, 244) 100%
-    );
-  }
-  .dataSelection {
-    width: 58%;
-    height: 7.5%;
-    display: inline-block;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    flex-direction: column;
-    background-color: #9bfbc6;
-  }
-  
-  .districtTown {
-    top: 16%;
-    left: 14%;
-    width: 9%;
-    height: 25px;
-    display: flex;
-    position: fixed;
-    align-self: center;
-    align-items: center;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    padding-left: 5px;
-  }
-  .countryLabel {
-    top: 132px;
-    left: 4%;
-    color: #000000;
-    width: 17%;
-    height: 30px;
-    display: flex;
-    position: fixed;
-    font-size: 14px;
-    font-family: "Arial";
-    font-weight: bold;
-  }
-  .townLabel {
-    top: 132px;
-    left: 14%;
-    color: #000000;
-    width: 17%;
-    height: 30px;
-    position: fixed;
-    font-size: 14px;
-    align-self: flex-start;
-    font-family: "Arial";
-    font-weight: bold;
-  }
-  .countrySelect {
-    top: 16%;
-    left: 4%;
-    width: 9%;
-    height: 25px;
-    display: flex;
-    position: fixed;
-    align-self: flex-start;
-    align-items: center;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    padding-left: 5px;
-  }
-  .searchDiv {
-    width: 23%;
-    height: 40px;
-    display: flex;
-    position: fixed;
-    margin-top: 8px;
-    align-items: center;
-    margin-left: 23%;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    margin-right: 15px;
-    border-radius: 5px;
-    justify-content: flex-end;
-    background-color: #f5c9ca;
-  }
-  .searchInput {
-    top: 145px;
-    left: 27%;
-    width: 13%;
-    bottom: 0px;
-    height: 23px;
-    position: fixed;
-    background-color: #ffffff;
-    display: flex;
-    font-size: 12px;
-    padding-left: 10px;
-  }
-  .applyBtn {
-    width: 25%;
-    height: 30px;
-    display: flex;
-    font-size: 18px;
-    align-self: center;
-    text-align: center;
-    align-items: center;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #000000;
-    margin-right: 30px;
-    border-radius: 10px;
-    justify-content: center;
-    background-color: #ffff00;
-  }
-  
-  .applyBtn {
-    width: 100px;
-    min-width: 70px;
-    height: 30px;
-    background-color: #fffb00;
-    border: 1px solid #1a1a1a;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 2px;
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    touch-action: manipulation;
-    will-change: transform;
-  }
-  
-  .applyBtn:hover {
-    color: #000000;
-    background-color: hsl(86, 95%, 76%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .applyBtn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .imageViewer {
-    top: 13.5%;
-    width: 33%;
-    margin-left: 48%;
-    height: 63%;
-    display: flex;
-    position: fixed;
-    align-self: flex-start;
-    align-items: flex-start;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    background-color: #ffffe9;
-    opacity: 1;
-  }
-  .mapAndData {
-    margin-top: 10px;
-    width: 47%;
-    height: 55%;
-    display: flex;
-    position: fixed;
-    align-items: flex-start;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    background-color: #96f7f0;
-  }
-  .openlayersMap {
-    width: 18%;
-    height: 51%;
-    display: flex;
-    position: fixed;
-    margin-top: 15px;
-    margin-left: 28%;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    background-color: #f1f1f1;
-  }
-  .dataTable {
-    width: 26%;
-    height: 51%;
-    display: flex;
-    margin-top: 15px;
-    margin-left: 15px;
-    display: flex;
-    position: fixed;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    background-color: #f1f1f1;
-  }
-  .imageThumbnails {
-    width: 81%;
-    border: 2px dashed rgba(120, 120, 120, 0.4);
-    height: 15%;
-    display: flex;
-    position: fixed;
-    opacity: 1;
-    margin-top: 29.3%;
-    align-items: flex-start;
-    border-color: #000000;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    background-color: #d9d9d9;
-  }
-  
-  /* popup css */
-  
-  .btn-open-popup {
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: rgb(252, 248, 10);
-    color: #0a0000;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-open-popup:hover {
-    background-color: #4caf50;
-  }
-  
-  .overlay-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  top: 1%;
+  left: auto;
+  width: 98%;
+  height: 7%;
+  min-height: 65px;
+  display: flex;
+  position: fixed;
+  align-self: flex-end;
+  align-items: center;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: #b5b97a;
+}
+.statsText {
+  width: 60%;
+  min-width: 100px;
+  height: 35px;
+  display: flex;
+  font-size: 1em;
+  font-style: normal;
+  align-items: center;
+  font-weight: 400;
+  margin-left: 80px;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 20px;
+  border-radius: 10px;
+  justify-content: flex-start;
+  background-color: #ececec;
+}
+
+.buttonSignUp {
+  width: 100px;
+  min-width: 70px;
+  height: 30px;
+  background-color: #bafcf7;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 10%;
+  text-align: center;
+  padding-bottom: 2px;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.buttonSignUp:hover {
+  color: #000000;
+  background-color: #e2faac;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.buttonSignUp:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.buttonLogIn {
+  width: 100px;
+  min-width: 70px;
+  height: 30px;
+  background-color: #9ef89e;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 1%;
+  text-align: center;
+  padding-bottom: 2px;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.buttonLogIn:hover {
+  color: #000000;
+  background-color: #faf5ac;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.buttonLogIn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.loginText {
+  width: auto;
+  min-width: 150px;
+  height: 30px;
+  display: flex;
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  margin-left: 2%;
+  border-color: #9f9f9f;
+  background-color: #cdefff;
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 2%;
+  padding-left: 10px;
+  border-radius: 10px;
+  padding-right: 10px;
+}
+
+.buttonRevert {
+  width: 100px;
+  min-width: 70px;
+  height: 30px;
+  background-color: #f57272;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 1%;
+  margin-right: 2%;
+  text-align: center;
+  padding-bottom: 2px;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.buttonRevert:hover {
+  color: #000000;
+  background-color: #fa0000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.buttonRevert:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.mapLogo {
+  left: 40px;
+  color: #0000ff;
+  position: fixed;
+}
+
+.bodyArea {
+  position: fixed;
+  margin-top: 4%;
+  left: auto;
+  width: 98%;
+  height: 89%;
+  display: flex;
+  align-items: center;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.sideBarDiv {
+  margin-left: 1640px;
+  margin-top: 75px;
+  width: 11%;
+  height: 81%;
+  display: inline;
+  opacity: 1;
+  padding-top: 30px;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  padding-left: 15px;
+  border-radius: 5px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  background-color: #f3f5af;
+}
+
+.zoomDiv {
+  width: auto;
+  height: 25%;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #a6eca7;
+}
+
+.zoomLabel {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 35%;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btnZoomIn {
+  width: 50px;
+  min-width: 40px;
+  height: 30px;
+  background-color: #b6f0ff;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 5%;
+  margin-left: 15%;
+  text-align: center;
+  padding-bottom: 4px;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.btnZoomIn:hover {
+  color: #000000;
+  background-color: #00d4fa;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btnZoomIn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.zoomValues {
+  width: 30px;
+  min-width: 10px;
+  height: 20px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  margin-left: 5%;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 5px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+.btnZoomOut {
+  width: 50px;
+  min-width: 40px;
+  height: 30px;
+  background-color: #b6f0ff;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 5%;
+  margin-top: 5%;
+  text-align: center;
+  padding-bottom: 5px;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.btnZoomOut:hover {
+  color: #000000;
+  background-color: #00d4fa;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btnZoomOut:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.zoomValuesMin {
+  width: 60px;
+  min-width: 10px;
+  height: 20px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  margin-left: 20%;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 5px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+.zoomValuesMax {
+  width: 60px;
+  min-width: 10px;
+  height: 20px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  margin-left: 5%;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 5px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  width: 100px;
+  height: 30px;
+  margin-left: 2%;
+  margin-top: 2%;
+  background-color: hsl(61, 100%, 68%);
+  color: rgb(0, 0, 0);
+  padding-left: 15px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  border: solid;
+  border-width: 1px;
+  display: flex;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fffd90;
+  font-size: 14px;
+  min-width: 100px;
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.layerManipulation {
+  width: 100%;
+  height: 37%;
+  margin-top: 10%;
+  margin-left: 0%;
+  display: flex;
+  align-self: center;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  flex-direction: column;
+  background-color: #95f7b4;
+}
+
+.layersID {
+  display: inline;
+  width: 180px;
+  height: 200px;
+  margin-top: 3.5%;
+  margin-left: 15px;
+  position: absolute;
+  border-color: #000000;
+  border-style: dotted;
+  border-width: 1px;
+  background-color: #6effec;
+}
+
+.layerLabel {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 30%;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.layerLabel2 {
+  margin-top: -8%;
+  margin-left: 10%;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  word-spacing: 20px;
+}
+
+.item {
+  padding: 5px;
+  border: 0px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+}
+
+.item.highlight {
+  background-color: #ffff24;
+}
+
+.zOrderInput1 {
+  top: 3px;
+  left: 110px;
+  width: 30%;
+  height: 20px;
+  position: absolute;
+}
+
+.zOrderInput2 {
+  top: 35px;
+  left: 110px;
+  width: 30%;
+  height: 20px;
+  position: absolute;
+}
+
+.zOrderInput3 {
+  top: 67px;
+  left: 110px;
+  width: 30%;
+  height: 20px;
+  position: absolute;
+}
+
+#rangeValue {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+}
+.rangeOpacity {
+  width: auto;
+  margin-left: 25px;
+  height: 15px;
+  background: #c8ff00;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0px rgb(217, 255, 0);
+}
+.rangeOpacity::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00fd0a;
+  cursor: pointer;
+  border: 0px solid #333;
+  box-shadow: -407px 0 0 400px #00fd0a;
+
+  -webkit-appearance: none;
+  background: #aa2b2b;
+  box-shadow: 0px 0 0 0px rgb(255, 255, 44); /* 2 */
+  border: 2px solid #ee0b0b; /* 1 */
+}
+
+#rangeValue1 {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+}
+.rangeOpacity1 {
+  width: auto;
+  margin-left: 25px;
+  height: 15px;
+  background: #c8ff00;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgb(217, 255, 0);
+}
+
+.mapOptions {
+  width: 100%;
+  height: 33%;
+  margin-top: 10%;
+  margin-left: 0%;
+  display: inline-block;
+  align-self: center;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #95f7b4;
+}
+
+.optionsLabel {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 30%;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.populationNumber {
+  background-color: rgb(252, 252, 40);
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  width: 95%;
+  height: 42%;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.item1 {
+  padding: 5px;
+  border: 0px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.listItem1 {
+  font-size: 16px;
+}
+.item1-text {
+  width: auto;
+  height: auto;
+  font-size: 14px;
+  margin-top: 30px;
+  line-height: 2;
+  border-color: black;
+  border-width: 0px;
+}
+
+.mainPage {
+  top: 96px;
+  left: 17px;
+  width: 81%;
+  height: 81%;
+  display: inline;
+  opacity: 1;
+  padding: 15px;
+  position: fixed;
+  padding-top: 30px;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  padding-left: 30px;
+  border-radius: 5px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(
+    270deg,
+    rgb(194, 229, 156) 0%,
+    rgb(100, 179, 244) 100%
+  );
+}
+.dataSelection {
+  width: 58%;
+  height: 7.5%;
+  display: inline-block;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  flex-direction: column;
+  background-color: #9bfbc6;
+}
+
+.districtTown {
+  top: 16%;
+  left: 14%;
+  width: 9%;
+  height: 25px;
+  display: flex;
+  position: fixed;
+  align-self: center;
+  align-items: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 5px;
+}
+.countryLabel {
+  top: 132px;
+  left: 4%;
+  color: #000000;
+  width: 17%;
+  height: 30px;
+  display: flex;
+  position: fixed;
+  font-size: 14px;
+  font-family: "Arial";
+  font-weight: bold;
+}
+.townLabel {
+  top: 132px;
+  left: 14%;
+  color: #000000;
+  width: 17%;
+  height: 30px;
+  position: fixed;
+  font-size: 14px;
+  align-self: flex-start;
+  font-family: "Arial";
+  font-weight: bold;
+}
+.countrySelect {
+  top: 16%;
+  left: 4%;
+  width: 9%;
+  height: 25px;
+  display: flex;
+  position: fixed;
+  align-self: flex-start;
+  align-items: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 5px;
+}
+.searchDiv {
+  width: 23%;
+  height: 40px;
+  display: flex;
+  position: fixed;
+  margin-top: 8px;
+  align-items: center;
+  margin-left: 23%;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 15px;
+  border-radius: 5px;
+  justify-content: flex-end;
+  background-color: #f5c9ca;
+}
+.searchInput {
+  top: 145px;
+  left: 27%;
+  width: 13%;
+  bottom: 0px;
+  height: 23px;
+  position: fixed;
+  background-color: #ffffff;
+  display: flex;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.applyBtn {
+  width: 25%;
+  height: 30px;
+  display: flex;
+  font-size: 18px;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  margin-right: 30px;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: #ffff00;
+}
+
+.applyBtn {
+  width: 100px;
+  min-width: 70px;
+  height: 30px;
+  background-color: #fffb00;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 2px;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.applyBtn:hover {
+  color: #000000;
+  background-color: hsl(86, 95%, 76%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.applyBtn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.imageViewer {
+  top: 13.5%;
+  width: 33%;
+  margin-left: 48%;
+  height: 63%;
+  display: flex;
+  position: fixed;
+  align-self: flex-start;
+  align-items: flex-start;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: #ffffe9;
+  opacity: 1;
+}
+.mapAndData {
+  margin-top: 10px;
+  width: 47%;
+  height: 55%;
+  display: flex;
+  position: fixed;
+  align-items: flex-start;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: #96f7f0;
+}
+.openlayersMap {
+  width: 18%;
+  height: 51%;
+  display: flex;
+  position: fixed;
+  margin-top: 15px;
+  margin-left: 28%;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #f1f1f1;
+}
+.dataTable {
+  width: 26%;
+  height: 51%;
+  display: flex;
+  margin-top: 15px;
+  margin-left: 15px;
+  display: flex;
+  position: fixed;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #f1f1f1;
+}
+.imageThumbnails {
+  width: 81%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 15%;
+  display: flex;
+  position: fixed;
+  opacity: 1;
+  margin-top: 29.3%;
+  align-items: flex-start;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+}
+
+/* popup css */
+
+.btn-open-popup {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: rgb(252, 248, 10);
+  color: #0a0000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-open-popup:hover {
+  background-color: #4caf50;
+}
+
+.overlay-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+  text-align: left;
+}
+
+.loginLabel {
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+.form-input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-submit,
+.btn-close-popup {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-submit {
+  background-color: green;
+  color: #fff;
+}
+
+.btn-close-popup {
+  margin-top: 12px;
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-submit:hover,
+.btn-close-popup:hover {
+  background-color: #4caf50;
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: translateY(20px);
   }
-  
-  .popup-box {
-    background: #fff;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    width: 320px;
-    text-align: center;
-    opacity: 0;
-    transform: scale(0.8);
-    animation: fadeInUp 0.7s ease-out forwards;
-  }
-  
-  .form-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-label {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #444;
-    text-align: left;
-  }
-  
-  .loginLabel {
-    margin-bottom: 30px;
-    font-size: 18px;
-    color: #000000;
-    text-align: center;
-  }
-  
-  .form-input {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .btn-submit,
-  .btn-close-popup {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-submit {
-    background-color: green;
-    color: #fff;
-  }
-  
-  .btn-close-popup {
-    margin-top: 12px;
-    background-color: #e74c3c;
-    color: #fff;
-  }
-  
-  .btn-submit:hover,
-  .btn-close-popup:hover {
-    background-color: #4caf50;
-  }
-  
-  /* Keyframes for fadeInUp animation */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Animation for popup */
-  .overlay-container.show {
-    display: flex;
+
+  to {
     opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* new thumbnail */
-  
-  .carousel-container {
-    width: 100%;
-    max-width: 1000px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .carousel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 602px;
-  }
-  .carousel img {
-    width: 100%;
-    height: 100%;
-    display: none;
-    opacity: 0.9;
-  }
-  .carousel img.active {
-    display: block;
-  }
-  .carousel .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  .carousel .arrow.left {
-    left: 10px;
-  }
-  .carousel .arrow.right {
-    right: 10px;
-  }
-  .thumbnails {
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    padding: 2px;
-    background-color: #f9f9f9;
-    overflow: hidden;
-  }
-  .thumbnails img {
-    width: 170px;
-    height: 130px;
-    margin: 0 2px;
-    cursor: pointer;
-    opacity: 0.6;
-  }
-  .thumbnails img.active {
-    opacity: 1;
-    border: 1px solid #007bff;
-  }
-  
-  .thumbnails .arrow1 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000000;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  .thumbnails .arrow1.left {
-    left: 10px;
-  }
-  .thumbnails .arrow1.right {
-    right: 10px;
-  }
-  
-  #map {
-  
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-  }
+}
+
+/* Animation for popup */
+.overlay-container.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* new thumbnail */
+
+.carousel-container {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 580px;
+}
+.carousel img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0.9;
+}
+.carousel img.active {
+  display: block;
+}
+.carousel .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel .arrow.left {
+  left: 10px;
+}
+.carousel .arrow.right {
+  right: 10px;
+}
+.thumbnails {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+.thumbnails img {
+  width: 170px;
+  height: 125px;
+  margin: 0 2px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.thumbnails img.active {
+  opacity: 1;
+  border: 1px solid #007bff;
+}
+
+.thumbnails .arrow1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.thumbnails .arrow1.left {
+  left: 10px;
+}
+.thumbnails .arrow1.right {
+  right: 10px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
