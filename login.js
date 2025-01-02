@@ -23,3 +23,12 @@ document.getElementById("signupBtn").addEventListener("click", function () {
     document.getElementById("signupPopup").style.display = "none";
   });
   
+  function popupRegister() {
+    const overlay = document.getElementById("popupRegister");
+    overlay.classList.toggle("show");
+  }
+
+  function popupSignIn() {
+    const overlay1 = document.getElementById("popupSignIn");
+    overlay1.classList.toggle("show");
+  }

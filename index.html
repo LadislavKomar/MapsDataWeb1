@@ -5,111 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maps Data</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <script src="https://cdn.jsdelivr.net/npm/ol@v10.3.0/dist/ol.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.3.0/ol.css">
- <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css" type="text/css">
-
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.3.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.3.0/ol.css">
+    <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css" type="text/css">
+    <script type="text/javascript" async src="login.js"></script>
+    <script type="text/javascript" async src="maps.js"></script>
+    <script type="text/javascript" async src="carousel.js"></script>
+    <script type="text/javascript" async src="sidebar.js"></script>
   </head>
 
-  <body>
+<body>
 <header>
-         <h1 id="statsBar" class="statsText">
-            Stats
-          </h1>
-          <button
-            id="signUpButton"
-            type="button"
-            name="signUpButton"
-            class="buttonSignUp"
-            onclick="popupRegister()"
-          >
-            Sign up
-          </button>
-          <button
-            id="loginButton"
-            type="button"
-            name="loginButton"
-            class="buttonLogIn"
-            onclick="popupSignIn()"
-          >
-            Login
-          </button>
-          <label id="usernameText" class="loginText">
-            Logged as: username
-          </label>
-          <button
-            id="revertButton"
-            type="button"
-            name="revertButton"
-            class="buttonRevert"
-          >
-        Revert
-          </button>
-          <svg
-            id="mapLogo"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            class="mapLogo"
-          >
-            <path
-              d="m20.5 3l-.16.03L15 5.1L9 3L3.36 4.9c-.21.07-.36.25-.36.48V20.5a.5.5 0 0 0 .5.5l.16-.03L9 18.9l6 2.1l5.64-1.9c.21-.07.36-.25.36-.48V3.5a.5.5 0 0 0-.5-.5M10 5.47l4 1.4v11.66l-4-1.4zm-5 .99l3-1.01v11.7l-3 1.16zm14 11.08l-3 1.01V6.86l3-1.16z"
-              fill="currentColor"
-            ></path>
-          </svg>
-        </div>
-</header>
+         <h1 id="statsBar" class="statsText">Stats</h1>
+          <button id="signUpButton" name="signUpButton" class="buttonSignUp" onclick="popupRegister()">Sign up</button>
+          <button id="loginButton" name="loginButton" class="buttonLogIn" onclick="popupSignIn()">Login</button>
+          <label id="usernameText" class="loginText"> Logged as: username</label>
+          <button id="revertButton" name="revertButton" class="buttonRevert">Revert</button>
+          <svg id="mapLogo" width="40" height="40" viewBox="0 0 24 24" class="mapLogo">
+            <path d="m20.5 3l-.16.03L15 5.1L9 3L3.36 4.9c-.21.07-.36.25-.36.48V20.5a.5.5 0 0 0 .5.5l.16-.03L9 18.9l6 2.1l5.64-1.9c.21-.07.36-.25.36-.48V3.5a.5.5 0 0 0-.5-.5M10 5.47l4 1.4v11.66l-4-1.4zm-5 .99l3-1.01v11.7l-3 1.16zm14 11.08l-3 1.01V6.86l3-1.16z"
+              fill="currentColor"></path></svg>
+ </header>     
+   <div id="sideBar" class="sideBarDiv">
+   
+    <div id="zoomInOut" class="zoomDiv">
       
-        <div id="sideBar" class="sideBarDiv">
-
-       <div id="zoomInOut" class="zoomDiv">
-<label id="zoomLabel" class="zoomLabel">Map zoom</label>
-        <button
-              type="button"
-              class="btnZoomIn"
-              id="zoomIn"
-            >
-              +
-            </button>
-           <script>
-
-        document.getElementById('zoomIn').addEventListener('click', function() {
-            var view = map.getView();
-            view.setZoom(view.getZoom() + 1);
-        });
-        </script>
-           
-            <p id="zoomValues" class="zoomValues">3</p>
-            <button
-              type="button"
-              class="btnZoomOut"
-              id="zoomOut"
-            >
-              -
-            </button>
-
-            <script>
-        document.getElementById('zoomOut').addEventListener('click', function() {
-            var view = map.getView();
-            view.setZoom(view.getZoom() - 1);
-        });
-              </script>
-
-            <p id="zoomValues" class="zoomValuesMin">1</p>
-            <p id="zoomValues" class="zoomValuesMax">7</p>
+        <label id="zoomLabel" class="zoomLabel">Map zoom</label>
+        <button class="btnZoomIn" id="zoomIn">+</button>
+        <p id="zoomValues" class="zoomValues">3</p>
+        <button class="btnZoomOut" id="zoomOut">-</button>
+         <p id="zoomValues" class="zoomValuesMin">1</p>
+         <p id="zoomValues" class="zoomValuesMax">7</p>
             
-          <div class="dropdown">
-  <button class="dropbtn">Min. zoom</button>
-  <div class="dropdown-content">
-    <a href="#">Zoom 1</a>
-    <a href="#">Zoom 3</a>
-    <a href="#">Zoom 5</a>
-  </div>
-</div> 
+     <div class="dropdown">
+ 
+      <button class="dropbtn">Min. zoom</button>
+      <div class="dropdown-content">
+         <a href="#">Zoom 1</a>
+         <a href="#">Zoom 3</a>
+         <a href="#">Zoom 5</a>
+      </div>
+    </div> 
 
-        <div class="dropdown">
+   <div class="dropdown">
   <button class="dropbtn">Max. zoom</button>
   <div class="dropdown-content">
     <a href="#">Zoom 5</a>
@@ -117,9 +55,7 @@
     <a href="#">Zoom 10</a>
   </div>
 </div> 
-
-
-          </div>
+        </div>
 
 
           <div id="layerManipul" class="layerManipulation">
@@ -148,73 +84,36 @@
                   <div class="item1"><input type="checkbox" class="checkbox" id="item5">Clustering</div>
                   <div class="populationNumber">
                     <p style="font-size: 15px; margin-left: 50px">Population limit</p>
-                    <span id="rangeValue1">100000</span>
-                    <Input class="rangeOpacity1" type="range" name="range1" value="100000" min="10000" max="1000000" onChange="rangeSlide1(this.value)" onmousemove="rangeSlide1(this.value)"></Input>
+                    <span id="rangeValue1">5000</span>
+                    <Input class="rangeOpacity1" type="range" name="range1" value="5000" min="5000" max="100000" onChange="rangeSlide1(this.value)" onmousemove="rangeSlide1(this.value)"></Input>
                 </div>
                 </div>
         
 
 
-
       <div id="mainPage" class="mainPage">
         <div id="data Selection" class="dataSelection">
-          <select
-            id="districtTown"
-            required="true"
-            autoComplete="on"
-            name="districtTown"
-            class="districtTown"
-          >
+          <select id="districtTown" required="true" autoComplete="on" name="districtTown" class="districtTown">
             <option value="Option 1">Bratislava</option>
             <option value="Option 2">Košice</option>
             <option value="Option 3">Banská Bystrica</option>
           </select>
-          <label
-            id="countryLabel"
-            htmlFor="countryLabel"
-            class="countryLabel"
-          >
-            Country
-          </label>
-          <label id="townTLabel" class="townLabel">
-            District/Town
-          </label>
-          <select
-            id="countrySelect"
-            name="Country"
-            required="true"
-            autoComplete="on"
-            class="countrySelect"
-          >
+          <label id="countryLabel" htmlFor="countryLabel" class="countryLabel">Country</label>
+          <label id="townTLabel" class="townLabel">District/Town</label>
+          <select id="countrySelect" name="Country" required="true" autoComplete="on" class="countrySelect">
             <option value="Slovakia">Slovakia</option>
             <option value="Option 2">Hungary</option>
             <option value="Option 3">Poland</option>
           </select>
           <div id="searchDiv" class="searchDiv">
-            <input
-              type="text"
-              id="searchInput"
-              placeholder="Search ..."
-              name="searchInput"
-              class="searchInput"
-            />
-            <button
-              id="applyBtn"
-              type="button"
-              name="applyBtn"
-              class="applyBtn"
-            >
-          Apply
-            </button>
+            <input type="text" id="searchInput" placeholder="Search ..." name="searchInput" class="searchInput"/>
+            <button id="applyBtn" name="applyBtn" class="applyBtn">Apply</button>
           </div>
         </div>
         <div id="imageViewer" class="imageViewer">
-<div class="carousel-container">
-   <div class="carousel">
-    <button class="arrow left">
-     <i class="fas fa-chevron-left">
-     </i>
-    </button>
+          <div class="carousel-container">
+            <div class="carousel">
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
     <img alt="Andromeda M31" class="active" src="image1a.jpg" />
     <img alt="Meteor shower" src="image2a.jpg" />
     <img alt="Dumbell nebula" src="image3a.jpg" />
@@ -226,49 +125,23 @@
     <img alt="Star formation nebula" src="image9a.jpg" />
     <img alt="Sombrero galaxy" src="image10a.jpg" />
 
-    <button class="arrow right">
-     <i class="fas fa-chevron-right">
-     </i>
-    </button>
+    <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
    </div>
    </div>
-
-          <!--
-          <button id="addBtn">Add Image</button>
-          <button id="deleteBtn">Delete Image</button>
-          
-        -->
-       
-        </div>
+  
+    </div>
+   
     <div id="mapAndData" class="mapAndData">
     <div id="openLayersMap" class="openlayersMap"></div>
     <div id="dataTable" class="dataTable">
 
-<div id="map" class="map"></div>
-    <script src="https://openlayers.org/en/latest/build/ol.js"></script>
-    <script>
-        var map = new ol.Map({
-            target: 'map',
-            layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
-                })
-            ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([0, 0]),
-                zoom: 2
-            })
-        });
-    </script>
-
-    </div>
+      <div id="map" class="map"></div>
+       </div>
         </div>
         
    <div id="thumbnails1" class="imageThumbnails">
      <div class="thumbnails">
-      <button class="arrow1 left">
-     <i class="fas fa-chevron-left"></i>
-     </button>
+      <button class="arrow1 left"><i class="fas fa-chevron-left"></i></button>
     <img alt="Andromeda M31" class="active" src="image1a.jpg" />
     <img alt="Meteor shower" src="image2a.jpg" />
     <img alt="Horloge nebula" src="image3a.jpg" />
@@ -279,9 +152,7 @@
     <img alt="Bubble nebula" src="image8a.jpg" />
     <img alt="Star formation nebula" src="image9a.jpg" />
     <img alt="Sombrero galaxy" src="image10a.jpg" />
-   <button class="arrow1 right">
-     <i class="fas fa-chevron-right"></i>
-     </button>
+   <button class="arrow1 right"><i class="fas fa-chevron-right"></i></button>
    </div>
 </div>
 
@@ -329,6 +200,7 @@
             <option value="magyar">Magyar</option>
           </select>
 
+          
           <label class="form-label" for="unit">Units:</label>
           <select id="unit" name="unit" class="form-input">
             <option value="metric">Metric (m, km)</option>
@@ -372,110 +244,6 @@
         <button class="btn-close-popup" onclick="popupSignIn()">Close</button>
       </div>
     </div>
-
-    <script>
-      function popupRegister() {
-        const overlay = document.getElementById("popupRegister");
-        overlay.classList.toggle("show");
-      }
-
-      function popupSignIn() {
-        const overlay1 = document.getElementById("popupSignIn");
-        overlay1.classList.toggle("show");
-      }
-    </script>
-
-<script>
-const items = document.querySelectorAll(".item");
-
-items.forEach((item) => {
-  item.addEventListener("click", () => {
-    items.forEach((i) => i.classList.remove("highlight"));
-    item.classList.add("highlight");
-  });
-});
-</script>
-
-<script type="text/javascript">
-  function rangeSlide(value) {
-      document.getElementById('rangeValue').innerHTML = value;
-  }
-</script>
-
-<script type="text/javascript">
-  function rangeSlide1(value) {
-      document.getElementById('rangeValue1').innerHTML = value;
-  }
-</script>
-
-<!--- thumbnail carousel-->
-
-<script>
-   const carouselImages = document.querySelectorAll('.carousel img');
-        const thumbnails = document.querySelectorAll('.thumbnails img');
-        const leftArrow = document.querySelector('.arrow.left');
-        const rightArrow = document.querySelector('.arrow.right');
-        const leftArrow1 = document.querySelector('.arrow1.left');
-        const rightArrow1 = document.querySelector('.arrow1.right');
-        let currentIndex = 0;
-      
-
-        function updateCarousel(index) {
-            carouselImages.forEach((img, i) => {
-                img.classList.toggle('active', i === index);
-            });
-            thumbnails.forEach((thumb, i) => {
-                thumb.classList.toggle('active', i === index);
-            });
-        }
-
-        leftArrow.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselImages.length - 1;
-            updateCarousel(currentIndex);
-        });
-
-        rightArrow.addEventListener('click', () => {
-            currentIndex = (currentIndex < carouselImages.length - 1) ? currentIndex + 1 : 0;
-            updateCarousel(currentIndex);
-        });
-
-
-           leftArrow1.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : thumbnails.length - 1;
-            updateCarousel(currentIndex);
-        });
-
-        rightArrow1.addEventListener('click', () => {
-            currentIndex = (currentIndex < thumbnails.length - 1) ? currentIndex + 1 : 0;
-            updateCarousel(currentIndex);
-        });
-
-        thumbnails.forEach((thumb, index) => {
-            thumb.addEventListener('click', () => {
-                currentIndex = index;
-                currentIndex1 = index;
-                updateCarousel(currentIndex);
-                
-            });
-        });
-
- </script>
-
- <script>
-const map = new Map({
-  target: 'map',
-  layers: [
-    new TileLayer({
-      source: new OSM(),
-    }),
-  ],
-  view: new View({
-    center: [0, 0],
-    zoom: 2,
-  }),
-});
-
-  </script>
 
   </body>
 </html>
