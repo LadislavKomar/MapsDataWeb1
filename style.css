@@ -175,10 +175,10 @@ header {
 }
 
 .sideBarDiv {
-  position: static;
+  position: absolute;
   z-index: 0;
   margin-left: 86%;
-  margin-top: 5%;
+  top: 13%;
   width: 10%;
   height: auto;
   padding-top: 30px;
@@ -359,7 +359,8 @@ header {
   position: absolute;
   background-color: #fffd90;
   font-size: 14px;
-  min-width: 100px;
+  width: auto;
+  min-width: 80px;
   box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -483,7 +484,7 @@ header {
 }
 .rangeOpacity {
   width: 70%;
-  margin-left: 25px;
+  margin-left: 15%;
   height: 15px;
   background: #c8ff00;
   border-radius: 15px;
@@ -499,9 +500,9 @@ header {
   font-weight: 400;
 }
 .rangeOpacity1 {
-  width: auto;
-  margin-left: 25px;
+  width: 70%;
   height: 15px;
+  margin-left: 15%;
   background: #c8ff00;
   border-radius: 15px;
   box-shadow: inset 0 0 5px rgb(217, 255, 0);
