@@ -171,29 +171,37 @@
     </div>
   
   </div>
+ 
 
- <div id="thumbnails1" class="imageThumbnails">
+   <div id="thumbnails1" class="imageThumbnails">
      <div class="thumbnails">
-      <button class="arrow1 left"><i class="fas fa-chevron-left"></i></button>
-    <img alt="Andromeda M31" class="active" src="image1a.jpg" />
-    <img alt="Meteor shower" src="image2a.jpg" />
-    <img alt="Horloge nebula" src="image3a.jpg" />
-    <img alt="Dumbell nebula" src="image4a.jpg" />
-    <img alt="Supernova remain" src="image5a.jpg" />
-    <img alt="Pillars of creation" src="image6a.jpg" />
-    <img alt="Galaxy M33" src="image7a.jpg" />
-    <img alt="Bubble nebula" src="image8a.jpg" />
-    <img alt="Star formation nebula" src="image9a.jpg" />
-    <img alt="Sombrero galaxy" src="image10a.jpg" />
-   <button class="arrow1 right"><i class="fas fa-chevron-right"></i></button>
+      <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+    <img alt="Andromeda M31" class="thumbnail" src="image1a.jpg" onclick="openPopup('image1a.jpg')"/>
+    <img alt="Meteor shower" class="thumbnail" src="image2a.jpg" onclick="openPopup('image2a.jpg')"/>
+    <img alt="Horloge nebula" class="thumbnail" src="image3a.jpg" onclick="openPopup('image3a.jpg')"/>
+    <img alt="Dumbell nebula" class="thumbnail" src="image4a.jpg" onclick="openPopup('image4a.jpg')"/>
+    <img alt="Supernova remain" class="thumbnail" src="image5a.jpg" onclick="openPopup('image5a.jpg')"/>
+    <img alt="Pillars of creation" class="thumbnail" src="image6a.jpg" onclick="openPopup('image6a.jpg')"/>
+    <img alt="Galaxy M33" class="thumbnail" src="image7a.jpg" onclick="openPopup('image7a.jpg')"/>
+    <img alt="Bubble nebula" class="thumbnail" src="image8a.jpg" onclick="openPopup('image8a.jpg')"/>
+    <img alt="Star formation nebula" class="thumbnail" src="image9a.jpg" onclick="openPopup('image9a.jpg')"/>
+    <img alt="Sombrero galaxy" class="thumbnail" src="image10a.jpg" onclick="openPopup('image10a.jpg')"/>
+   <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
    </div>
 </div>
+</div>
 
-  </div>
+ 
 
 
 
 <!-- popups-->
+
+
+    <div id="popup" class="popup" onclick="closePopup()">
+        <span class="close">&times;</span>
+        <img class="popup-content" id="popup-img">
+    </div>
 
     <div id="popupRegister" class="overlay-container">
       <div class="popup-box">
