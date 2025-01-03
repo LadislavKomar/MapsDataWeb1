@@ -31,6 +31,8 @@
               fill="currentColor"></path></svg>
  </header>     
  
+
+
  <div id="sideBar" class="sideBarDiv">
    
     <div id="zoomInOut" class="zoomDiv">
@@ -69,25 +71,23 @@
   </div>
   </div>
  
-
-
           <div id="layerManipul" class="layerManipulation">
+         
             <p id="layerLabel" class="layerLabel">Layer visibility</p><br> 
             <p class="layerLabel2"> Vis.    Layer   z-Index</p> 
+          
             <div class="layersID">
-             
-              
-              <div style="display: inline-flex; justify-content:center" class="item"><input type="checkbox" class="checkbox" id="item1" checked="true">Layer 1
+              <div style="display: inline-flex; justify-content:center" class="item"><input type="checkbox" class="checkbox" id="item1" checked="true">Layer1
                 <input type="number" id="zOrder1" value="-1" class="zOrderInput1"/></div>
               
-              <div style="display: inline-flex; justify-content:center" class="item"><input type="checkbox" class="checkbox" id="item2">Layer 2
+              <div style="display: inline-flex; justify-content:center" class="item"><input type="checkbox" class="checkbox" id="item2">Layer2
                 <input type="number" id="zOrder2" value="0" class="zOrderInput2"/></div>
             
-              <div style="display: inline-flex; justify-content:center" class="item"><input type="checkbox" class="checkbox" id="item3">Layer 3
+              <div style="display: inline-flex; justify-content:center" class="item"><input type="checkbox" class="checkbox" id="item3">Layer3
                 <input type="number" id="zOrder3" value="1" class="zOrderInput3"/></div>
            
                 <div>
-                  <p style="font-size: 15px; margin-left: 10px">Selected layer opacity</p>
+                  <p style="font-size: 15px; display: flex; justify-content:center; text-align: center;">Selected layer opacity</p>
                   <span id="rangeValue">80</span>
                   <input class="rangeOpacity" type="range" name="range" value="80" min="0" max="100" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
               </div>
@@ -100,13 +100,14 @@
                   <div class="item1"><input type="checkbox" class="checkbox" id="item4" checked="true">Display coordinates</div>
                   <div class="item1"><input type="checkbox" class="checkbox" id="item5">Clustering</div>
                   <div class="populationNumber">
-                    <p style="font-size: 15px; margin-left: 50px">Population limit</p>
+                    <p style="font-size: 15px; display: flex; justify-content:center">Population limit</p>
                     <span id="rangeValue1">5000</span>
                     <Input class="rangeOpacity1" type="range" name="range1" value="5000" min="5000" max="100000" onChange="rangeSlide1(this.value)" onmousemove="rangeSlide1(this.value)"></Input>
                 </div>
                 </div>
         </div>
 
+        
 
       <div id="mainPage" class="mainPage">
         <div id="data Selection" class="dataSelection">

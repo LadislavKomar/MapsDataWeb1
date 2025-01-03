@@ -7,10 +7,10 @@ items.forEach((item) => {
   });
 });
 
-  function rangeSlide(value) {
-      document.getElementById('rangeValue').innerHTML = value;
-  }
+function rangeSlide(value) {
+  document.getElementById("rangeValue").innerHTML = value;
+}
 
-  function rangeSlide1(value) {
-      document.getElementById('rangeValue1').innerHTML = value;
-  }
+function rangeSlide1(value) {
+  document.getElementById("rangeValue1").innerHTML = value;
+}

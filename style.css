@@ -11,6 +11,7 @@ body {
 
 header {
   top: 1%;
+  z-index: 1;
   left: auto;
   width: 98%;
   height: 7%;
@@ -175,10 +176,11 @@ header {
 
 .sideBarDiv {
   position: static;
+  z-index: 0;
   margin-left: 86%;
   margin-top: 5%;
   width: 10%;
-  height: 85%;
+  height: auto;
   padding-top: 30px;
   border-color: #000000;
   border-style: solid;
@@ -404,8 +406,10 @@ header {
   display: inline;
   width: 90%;
   height: auto;
-  margin-top: 0%;
+  margin-top: -5%;
   margin-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-color: #000000;
   border-style: dotted;
   border-width: 1px;
@@ -423,14 +427,12 @@ header {
 }
 
 .layerLabel2 {
-  display: flex;
-  justify-content: center;
-  margin-top: -20%;
+  margin-top: -15%;
   text-align: center;
   color: #000000;
   font-size: 14px;
   font-weight: 400;
-  word-spacing: 10px;
+  word-spacing: 5px;
 }
 
 .item {
@@ -441,8 +443,8 @@ header {
 }
 
 .checkbox {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   margin-right: 5px;
 }
 
@@ -454,25 +456,24 @@ header {
   width: 25%;
   height: 15px;
   margin-top: 0%;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .zOrderInput2 {
   width: 25%;
   height: 15px;
   margin-top: 0%;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .zOrderInput3 {
   width: 25%;
   height: 15px;
   margin-top: 0%;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 #rangeValue {
-  position: relative;
   display: block;
   text-align: center;
   margin-bottom: 5px;
@@ -488,23 +489,8 @@ header {
   border-radius: 15px;
   box-shadow: inset 0 0 0px rgb(217, 255, 0);
 }
-.rangeOpacity::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #00fd0a;
-  cursor: pointer;
-  border: 0px solid #333;
-  box-shadow: -407px 0 0 400px #00fd0a;
-
-  -webkit-appearance: none;
-  background: #aa2b2b;
-  box-shadow: 0px 0 0 0px rgb(255, 255, 44); /* 2 */
-  border: 2px solid #ee0b0b; /* 1 */
-}
 
 #rangeValue1 {
-  position: relative;
   display: block;
   text-align: center;
   margin-bottom: 5px;
@@ -523,9 +509,10 @@ header {
 
 .mapOptions {
   width: 100%;
-  height: 33%;
+  height: auto;
   margin-top: 10%;
   margin-left: 0%;
+  padding-bottom: 10px;
   display: inline-block;
   align-self: center;
   border-color: #000000;
@@ -545,13 +532,14 @@ header {
 }
 
 .populationNumber {
+  display: block;
   background-color: rgb(252, 252, 40);
   border-color: #000000;
   border-style: solid;
   border-width: 1px;
-  width: 95%;
+  width: 90%;
   height: 42%;
-  margin-left: 5px;
+  margin-left: 5%;
   margin-top: 10px;
 }
 
@@ -563,10 +551,10 @@ header {
 }
 
 .listItem1 {
-  font-size: 16px;
+  font-size: 14px;
 }
 .item1-text {
-  width: auto;
+  width: 100%;
   height: auto;
   font-size: 14px;
   margin-top: 30px;
