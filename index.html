@@ -110,26 +110,9 @@
         
 
      <div id="mainPage" class="mainPage"> 
-<!--
-        <div id="data Selection" class="dataSelection">
-          <select id="districtTown" required="true" autoComplete="on" name="districtTown" class="districtTown">
-            <option value="Option 1">Bratislava</option>
-            <option value="Option 2">Košice</option>
-            <option value="Option 3">Banská Bystrica</option>
-          </select>
-          <label id="countryLabel" htmlFor="countryLabel" class="countryLabel">Country</label>
-          <label id="townTLabel" class="townLabel">District/Town</label>
-          <select id="countrySelect" name="Country" required="true" autoComplete="on" class="countrySelect">
-            <option value="Slovakia">Slovakia</option>
-            <option value="Option 2">Hungary</option>
-            <option value="Option 3">Poland</option>
-          </select>
-          <div id="searchDiv" class="searchDiv">
-            <input type="text" id="searchInput" placeholder="Search ..." name="searchInput" class="searchInput"/>
-            <button id="applyBtn" name="applyBtn" class="applyBtn">Apply</button>
-          </div>
-        </div>
-      -->  
+
+
+       
       
       <!--  <div id="imageViewer" class="imageViewer"> 
           <div class="carousel-container">
@@ -154,17 +137,42 @@
   -->
 
   <div id="mapAndData" class="mapAndData">
-<div id="dataTable" class="dataTable"></div>
-
+  
+    <div id="dataTable" class="dataTable"></div>
     <div id="openlayersMap" class="openlayersMap">
     <div id="map" class="map"></div></div>
-
-  </div>
-
+  
+    <div id="data Selection" class="dataSelection">
+     
+      <div style="display: flex; justify-content: center;">
+      <label id="countryLabel" htmlFor="countryLabel" class="countryLabel">Country</label>
+      <label id="townTLabel" class="townLabel">District/Town</label>
+      </div>
+      
+      <div style="display: flex; justify-content: center;">
+      <select id="countrySelect" name="Country" required="true" autoComplete="on" class="countrySelect">
+        <option value="Slovakia">Slovakia</option>
+        <option value="Option 2">Hungary</option>
+        <option value="Option 3">Poland</option>
+      </select>
+           
+      <select id="districtTown" required="true" autoComplete="on" name="districtTown" class="districtTown">
+        <option value="Option 1">Bratislava</option>
+        <option value="Option 2">Košice</option>
+        <option value="Option 3">Banská Bystrica</option>
+      </select>
+      </div>
+      
+    <div class="searchDiv" style="display:flex; justify-content: center;">
+        <input type="text" id="searchInput" placeholder="Search ..." name="searchInput" class="searchInput"/>
+        <button id="applyBtn" name="applyBtn" class="applyBtn">Apply</button>
+    </div>
+   
+    </div>
   
   </div>
-      <!--  
-   <div id="thumbnails1" class="imageThumbnails">
+
+ <div id="thumbnails1" class="imageThumbnails">
      <div class="thumbnails">
       <button class="arrow1 left"><i class="fas fa-chevron-left"></i></button>
     <img alt="Andromeda M31" class="active" src="image1a.jpg" />
@@ -180,7 +188,9 @@
    <button class="arrow1 right"><i class="fas fa-chevron-right"></i></button>
    </div>
 </div>
--->
+
+  </div>
+
 
 
 <!-- popups-->
