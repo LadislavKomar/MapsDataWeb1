@@ -1,3 +1,4 @@
+/*
 const thumbnails = document.querySelectorAll(".thumbnails img");
 const leftArrow1 = document.querySelector(".arrow.left");
 const rightArrow1 = document.querySelector(".arrow.right");
@@ -25,17 +26,7 @@ thumbnails.forEach((thumb, index) => {
     updateCarousel(currentIndex);
   });
 });
-
-function moveSlide(direction) {
-  const thumbnails = document.querySelectorAll(".thumbnail");
-  currentIndex =
-    (currentIndex + direction + thumbnails.length) % thumbnails.length;
-  const offset = -currentIndex * (thumbnails[0].clientWidth + 10); // 10 is the margin
-  document.querySelector(
-    ".thumbnails"
-  ).style.transform = `translateX(${offset}px)`;
-}
-
+*/
 function openPopup(imageSrc) {
   const popup = document.getElementById("popup");
   const popupImg = document.getElementById("popup-img");
@@ -46,3 +37,38 @@ function openPopup(imageSrc) {
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
+
+const wrapper = document.querySelector(".thumbnails");
+const container = document.querySelector(".imageThumbnails");
+const children = wrapper.querySelectorAll(".child");
+const leftArr = document.querySelector(".left-arrow");
+const rightArr = document.querySelector(".right-arrow");
+
+let counter = 0;
+let infiniteCounter = 0;
+
+container.addEventListener("click", function (e) {
+  wrapper.style.transition = ".5s ease all";
+  if (e.target.classList.contains("left-arrow")) {
+    infiniteCounter = -1;
+    counter += 20;
+    wrapper.style.transform = `translateX(${counter}%)`;
+    wrapper.style.transform = `translateX(0%)`;
+    wrapper.prepend(wrapper.lastElementChild);
+  }
+
+  if (e.target.classList.contains("right-arrow")) {
+    infiniteCounter = 1;
+    counter -= 20;
+    wrapper.style.transform = `translateX(${counter}%)`;
+    wrapper.appendChild(wrapper.firstElementChild);
+    wrapper.style.transform = `translateX(0%)`;
+  }
+});
+
+let infiniteCarousel = function () {
+  wrapper.style.transition = "none";
+  counter = 0;
+};
+
+wrapper.addEventListener("transitionend", infiniteCarousel);
