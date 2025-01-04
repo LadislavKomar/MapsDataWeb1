@@ -1,32 +1,3 @@
-/*
-const thumbnails = document.querySelectorAll(".thumbnails img");
-const leftArrow1 = document.querySelector(".arrow.left");
-const rightArrow1 = document.querySelector(".arrow.right");
-let currentIndex = 0;
-
-function updateCarousel(index) {
-  thumbnails.forEach((thumb, i) => {
-    thumb.classList.toggle("active", i === index);
-  });
-}
-
-leftArrow1.addEventListener("click", () => {
-  currentIndex = currentIndex > 0 ? currentIndex - 1 : thumbnails.length - 1;
-  updateCarousel(currentIndex);
-});
-
-rightArrow1.addEventListener("click", () => {
-  currentIndex = currentIndex < thumbnails.length - 1 ? currentIndex + 1 : 0;
-  updateCarousel(currentIndex);
-});
-
-thumbnails.forEach((thumb, index) => {
-  thumb.addEventListener("click", () => {
-    currentIndex = index;
-    updateCarousel(currentIndex);
-  });
-});
-*/
 function openPopup(imageSrc) {
   const popup = document.getElementById("popup");
   const popupImg = document.getElementById("popup-img");
@@ -38,6 +9,7 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
+// carousel move
 const wrapper = document.querySelector(".thumbnails");
 const container = document.querySelector(".imageThumbnails");
 const children = wrapper.querySelectorAll(".child");
@@ -72,3 +44,24 @@ let infiniteCarousel = function () {
 };
 
 wrapper.addEventListener("transitionend", infiniteCarousel);
+
+/* read exif data */
+document.querySelectorAll(".thumbnail img").forEach((thumbnail) => {
+  thumbnail.addEventListener("click", function () {
+    const popup = document.getElementById("popup");
+    const popupImage = document.getElementById("popupImage");
+    const exifDataDiv = document.getElementById("exifData");
+
+    popupImage.src = this.src;
+    popup.style.display = "block";
+
+    EXIF.getData(this, function () {
+      const exifData = EXIF.pretty(this);
+      exifDataDiv.innerHTML = exifData ? exifData : "No EXIF data found";
+    });
+  });
+});
+
+document.getElementById("closePopup").addEventListener("click", function () {
+  document.getElementById("popup").style.display = "none";
+});

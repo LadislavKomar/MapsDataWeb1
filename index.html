@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.3.0/dist/ol.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.3.0/ol.css">
     <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css" type="text/css">
   
@@ -111,31 +112,6 @@
 
      <div id="mainPage" class="mainPage"> 
 
-
-       
-      
-      <!--  <div id="imageViewer" class="imageViewer"> 
-          <div class="carousel-container">
-            <div class="carousel">
-            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-    <img alt="Andromeda M31" class="active" src="image1a.jpg" />
-    <img alt="Meteor shower" src="image2a.jpg" />
-    <img alt="Dumbell nebula" src="image3a.jpg" />
-    <img alt="Horloge nebula" src="image4a.jpg" />
-    <img alt="Supernova remain" src="image5a.jpg" />
-    <img alt="Pillars of creation" src="image6a.jpg" />
-    <img alt="Galaxy M33" src="image7a.jpg" />
-    <img alt="Bubble nebula" src="image8a.jpg" />
-    <img alt="Star formation nebula" src="image9a.jpg" />
-    <img alt="Sombrero galaxy" src="image10a.jpg" />
-
-    <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-   </div>
-   </div>
-  
-    </div>
-  -->
-
   <div id="mapAndData" class="mapAndData">
   
     <div id="dataTable" class="dataTable"></div>
@@ -175,7 +151,6 @@
 
 <div class="imageThumbnails">
   <div class="thumbnails">
-    
     <div class="thumbnail"><img src="image1a.jpg" onclick="openPopup('image1a.jpg')"></div>
     <div class="thumbnail"><img src="image2a.jpg" onclick="openPopup('image2a.jpg')"></div>
     <div class="thumbnail"><img src="image3a.jpg" onclick="openPopup('image3a.jpg')"></div>
@@ -191,39 +166,18 @@
     <div class="right-arrow"> &rArr; </div> 
 </div>
 
-<!--
-   <div id="thumbnails1" class="container">
-     <div class="wrapper">
-    <button class="arrow left"><i class="fas fa-chevron-left"></i></button> 
-    <div img alt="Andromeda M31" class="child" src="image1a.jpg" onclick="openPopup('image1a.jpg')"></div>
-    <div img alt="Meteor shower" class="child" src="image2a.jpg" onclick="openPopup('image2a.jpg')"></div>
-    <div img alt="Horloge nebula" class="child" src="image3a.jpg" onclick="openPopup('image3a.jpg')"></div>
-    <div img alt="Dumbell nebula" class="child" src="image4a.jpg" onclick="openPopup('image4a.jpg')"></div>
-    <div img alt="Supernova remain" class="child" src="image5a.jpg" onclick="openPopup('image5a.jpg')"></div>
-    <div img alt="Pillars of creation" class="child" src="image6a.jpg" onclick="openPopup('image6a.jpg')"></div>
-    <div img alt="Galaxy M33" class="child" src="image7a.jpg" onclick="openPopup('image7a.jpg')"></div>
-    <div img alt="Bubble nebula" class="child" src="image8a.jpg" onclick="openPopup('image8a.jpg')"></div>
-    <div img alt="Star formation nebula" class="child" src="image9a.jpg" onclick="openPopup('image9a.jpg')"></div>
-    <div img alt="Sombrero galaxy" class="child" src="image10a.jpg" onclick="openPopup('image10a.jpg')"></div>
-    <button class="arrow right"><i class="fas fa-chevron-right"></i></button> 
-   </div>
-   <div class="left-arrow"> &larr; </div>
-    <div class="right-arrow"> &rarr; </div>
-</div>
-</div>
--->
-
- 
-
 
 
 <!-- popups-->
 
 
-    <div id="popup" class="popup" onclick="closePopup()">
-        <span class="close">&times;</span>
-        <img class="popup-content" id="popup-img">
-    </div>
+    <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>   
+      <img class="popup-content" id="popupImage">
+       <div class="exif-data" id="exifData"></div>
+      </div>
+
+
 
     <div id="popupRegister" class="overlay-container">
       <div class="popup-box">

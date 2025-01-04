@@ -999,21 +999,35 @@ header {
 }
 
 .popup {
-  display: none;
   position: fixed;
+  display: none;
+  justify-content: center;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .popup-content {
-  max-width: 90%;
-  max-height: 90%;
+  width: 50%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.exif-data {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #6effec;
+  margin-top: -35%;
+  margin-left: 65%;
+  height: 60%;
+  width: 30%;
+  font-size: 14px;
+  color: white;
+  text-wrap: stable;
 }
 
 .close {
