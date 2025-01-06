@@ -14,17 +14,14 @@
     <script src="https://cdn.jsdelivr.net/npm/ol/ol.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.umd.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@^0.4.0/dist/vue-treeselect.min.css">
+   
+        <!-- <script type="text/javascript" async src="./main.js"></script> -->
 
-
-
-    <script type="text/javascript" async src="./main.js"></script>
+    <script type="module" src="./src/main1.js"></script>    
     <script type="text/javascript" async src="login.js"></script>
     <script type="text/javascript" async src="maps.js"></script>
     <script type="text/javascript" async src="carousel.js"></script>
     <script type="text/javascript" async src="sidebar.js"></script>
-
   </head>
 
 <body>
@@ -39,7 +36,6 @@
               fill="currentColor"></path></svg>
  </header>     
  
-
 
  <div id="sideBar" class="sideBarDiv">
    
@@ -127,13 +123,16 @@
   
     <div id="data Selection" class="dataSelection">
      
-     
-
-      <div style="display: flex; justify-content: center;">
+    <!-- 
+    <div style="display: flex; justify-content: center;">
       <label id="countryLabel" htmlFor="countryLabel" class="countryLabel">Country</label>
       <label id="townTLabel" class="townLabel">District/Town</label>
-      </div>
-     
+    </div>
+  -->
+    <div id="app" class="countrySelect"></div>
+   
+              
+        <!--
     <div id="country">
         <treeselect
             v-model="selectedCountry"
@@ -144,6 +143,7 @@
             class="custom-treeselect"
         />
     </div>
+  -->
 
 
    

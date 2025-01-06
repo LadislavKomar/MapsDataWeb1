@@ -615,14 +615,15 @@ header {
   font-weight: bold;
 }
 .countrySelect {
-  margin-top: 12%;
-  margin-left: -65%;
-  width: 80%;
-  height: 25px;
+  position: absolute;
+  top: 0%;
+  left: -2%;
+  width: 20%;
+  height: 10%;
   border-color: black;
-  border-style: solid;
+  border-style: none;
   border-width: 1px;
-  padding-left: 5px;
+  padding-left: 0px;
 }
 
 .districtTown {
@@ -1076,13 +1077,4 @@ header {
 .right-arrow {
   left: 97%;
   top: 90%;
-}
-
-.custom-treeselect {
-  position: relative;
-  margin-top: 1%;
-  margin-left: 3%;
-  height: auto;
-  width: 45%;
-  font-size: 14px;
 }
