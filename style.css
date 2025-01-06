@@ -585,8 +585,10 @@ header {
 }
 
 .dataSelection {
+  position: absolute;
+  display: flex;
   width: 35%;
-  height: 22%;
+  height: 30%;
   margin-top: 0.8%;
   margin-left: 1%;
   border-color: #000000;
@@ -615,13 +617,13 @@ header {
   font-weight: bold;
 }
 .countrySelect {
-  position: absolute;
+  justify-content: baseline;
   top: 0%;
-  left: -2%;
-  width: 20%;
-  height: 10%;
+  left: 0%;
+  width: 40%;
+  height: 0%;
   border-color: black;
-  border-style: none;
+  border-style: solid;
   border-width: 1px;
   padding-left: 0px;
 }
